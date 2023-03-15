@@ -1,9 +1,19 @@
 pipeline {
   agent any
   stages {
-    stage ('Stage 1') {
+    stage ('configuration') {
       steps {
-        echo "salut depuis github"
+        echo "step de configuration"
+      }
+    }
+    stage ('verification') {
+      steps {
+        echo "step de verification"
+      }
+    }
+    stage ('deploiement') {
+      steps {
+        echo "step de deploiement"
       }
     }
   }
