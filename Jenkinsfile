@@ -2,7 +2,7 @@ pipeline {
   agent any
   stages {
     stage ('Stage 1') {
-      step {
+      steps {
         echo "salut depuis github"
       }
     }
