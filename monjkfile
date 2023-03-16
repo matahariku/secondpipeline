@@ -1,14 +1,14 @@
 pipeline {
     agent {
-        docker { image 'node:16.13.1-alpine'}
-    } 
-  stages {
-    stage('tmp') {
-      steps {
-        echo 'test'
-        sleep 60
-        sh 'node --version'  
-      }
-    }   
-  }
+        docker { image 'node:16.13.1-alpine' }
+    }
+    
+    stages {
+        stage('Test') {
+            steps {
+                sleep 60
+                sh 'node --version'
+            }
+        }
+    }
 }
