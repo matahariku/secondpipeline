@@ -1,20 +1,15 @@
 pipeline {
   agent any
+  
   stages {
-    stage ('configuration') {
+    stage('construction') {
       steps {
-        echo "step de configuration"
+        echo "etape de construction"
+        sh 'make main'
+        sh 'ls'
+        archiveArtifacts artifacts: 'main', fingerprint: true
       }
-    }
-    stage ('verification') {
-      steps {
-        echo "step de verification"
-      }
-    }
-    stage ('deploiement') {
-      steps {
-        echo "step de deploiement"
-      }
-    }
+    }   
+
   }
 }
