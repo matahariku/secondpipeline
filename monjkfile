@@ -6,6 +6,7 @@ pipeline {
     stage('tmp') {
       steps {
         echo 'test'
+        sleep 60
         sh 'node --version'  
       }
     }   
