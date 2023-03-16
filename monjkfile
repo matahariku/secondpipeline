@@ -1,13 +1,13 @@
 pipeline {
-  agent any
-  
+    agent {
+        docker { image 'node:16.13.1-alpine'}
+    }
+    
   stages {
-    stage('construction') {
+    stage('tmp') {
       steps {
-        echo "etape de construction"
-        sh 'make main'
-        sh 'ls'
-        archiveArtifacts artifacts: 'main', fingerprint: true
+        echo "step docker"
+        sh 'node --version'  
       }
     }   
 
