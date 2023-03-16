@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('tmp') {
       steps {
-        echo "step docker"
+        echo "etape de test"
         sh 'node --version'  
       }
     }   
